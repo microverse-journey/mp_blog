@@ -6,7 +6,6 @@ class Post < ApplicationRecord
   #   updates the posts counter for a user.
   def self.update_counter
     user = User.find_by(author_id: author_id)
-    # count = where(author_id: author_id).count(:author_id)
     user.update(posts_counter: user.posts.count)
   end
 
@@ -22,7 +21,7 @@ class Post < ApplicationRecord
   end
 
   # update comment counter
-  def update_likes
+  def update_comments
     self.comments_counter = self.comments.count
     self.save
   end
