@@ -3,8 +3,9 @@ class Post < ApplicationRecord
   has_many :likes
   has_many :comments
 
-  # returns the 3 most recent posts for a given user
-  def self.three_most_recent(author_id)
-    where(author_id: author_id).order("created_at": :desc).limit(3)
+  #   updates the posts counter for a user.
+  def self.update_counter(author_id)
+    count = where(author_id: author_id).count(:author_id)
+    User.find_by(author_id: author_id).update(posts_counter: counter + 1)
   end
 end
