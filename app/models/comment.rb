@@ -3,7 +3,7 @@ class Comment < ApplicationRecord
   belongs_to :post
 
   # updates the comments counter for a post
-  def update_comment_counter(post_id)
+  def update_comments_counter(post_id)
     count = where(post_id: post_id).count(:post_id)
     Post.find(post_id).update(:comments_counter count)
   end
