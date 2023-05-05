@@ -50,7 +50,7 @@ RSpec.describe Post, type: :model do
   describe '#five_most_recent_comments' do
     it 'should return recent comments less than or equal to 5' do
       5.times do
-        Comment.create author: author, post: subject, text: "comment one"
+        Comment.create author:, post: subject, text: 'comment one'
       end
 
       expect(subject.five_most_recent_comments.count).to be <= 5

@@ -16,5 +16,4 @@ RSpec.describe Like, type: :model do
       expect(subject.post.likes_counter).to eq(1)
     end
   end
-
 end
