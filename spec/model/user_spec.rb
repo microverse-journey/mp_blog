@@ -10,10 +10,10 @@ RSpec.describe User, type: :model do
       have_many(:posts)
     end
     it 'has many comments' do
-        have_many(:comments)
+      have_many(:comments)
     end
     it 'has many likes' do
-        have_many(:likes)
+      have_many(:likes)
     end
     # it { should have_many(:comments) }
     # it { should have_many(:likes) }
