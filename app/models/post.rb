@@ -3,6 +3,10 @@ class Post < ApplicationRecord
   has_many :likes
   has_many :comments
 
+  validates :author, presence: true
+  validates :text, presence: true
+  validates :title, presence: true
+
   after_create :update_user_posts_counter
   after_destroy :update_user_posts_counter
 
@@ -12,7 +16,7 @@ class Post < ApplicationRecord
   end
 
   # returns the 5 most recent comments for a given post.
-  def self.five_most_recent_comments(post_id)
-    Comment.where(post_id:).order(created_at: :desc).limit(5)
+  def self.five_most_recent_comments
+    comments.order(created_at: :desc).limit(5)
   end
 end
