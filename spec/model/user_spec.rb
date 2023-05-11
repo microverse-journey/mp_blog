@@ -15,8 +15,6 @@ RSpec.describe User, type: :model do
     it 'has many likes' do
       have_many(:likes)
     end
-    # it { should have_many(:comments) }
-    # it { should have_many(:likes) }
   end
 
   describe 'validation' do
