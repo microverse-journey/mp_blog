@@ -1,1 +1,31 @@
-<h1>Single User</h1>
+<main class="container">
+    <div class="user-card">
+        <div>
+            <img src="<%= @user.photo %>" alt="<%= @user.name %>" class="img">
+        </div>
+        <div class="user-info">
+            <h2><%= @user.name  %></h2>
+            <p>Number of post: <span class="post_number"><%= @user.posts_counter || 0  %></span></p>
+        </div>
+    </div>
+
+    <div class="bio">
+        <h3>Bio</h3>
+        <p><%= user.bio %></p>
+    </div>
+
+    <div class="posts">
+        <div class="post">
+            <h3>Post #1</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat ullam optio numquam ex! Culpa ratione ullam at, sint necessitatibus sed dolores blanditiis similique alias non numquam expedita iusto neque quae?</p>
+            <hr>
+        </div>
+
+        <div class="post">
+            <h3>Post #2</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat ullam optio numquam ex! Culpa ratione ullam at, sint necessitatibus sed dolores blanditiis similique alias non numquam expedita iusto neque quae?</p>
+        </div>
+    </div>
+
+    <button>See all posts</button>
+</main>
