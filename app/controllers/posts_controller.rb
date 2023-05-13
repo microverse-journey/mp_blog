@@ -18,7 +18,7 @@ class PostsController < ApplicationController
       text: params['post']['text']
     )
 
-    if(@post.save)
+    if @post.save
       flash[:success] = 'Post created successfully'
       redirect_to user_path(current_user)
     else
@@ -26,5 +26,4 @@ class PostsController < ApplicationController
       render :new
     end
   end
-
 end
