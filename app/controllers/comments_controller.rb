@@ -5,17 +5,17 @@ class CommentsController < ApplicationController
     end
   
     def create
-      @post = Comment.new(
+      @comment = Comment.new(
         post_id: params[:id],
-        title: params['post']['title'],
-        text: params['post']['text']
+        author_id: current_user.id,
+        text: params['comment']['text']
       )
   
-      if(@post.save)
-        flash[:success] = 'Post created successfully'
-        redirect_to user_path(current_user)
+      if(@comment.save)
+        flash[:success] = 'Comment created successfully'
+        redirect_to user_post_path(current_user, @comment.post)
       else
-        flash[:alert] = "Oops! something went wrong. Post couldn't be created"
+        flash[:alert] = "Oops! something went wrong. Comment couldn't be created"
         render :new
       end
     end
