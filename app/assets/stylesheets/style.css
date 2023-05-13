@@ -1,7 +1,6 @@
 body {
     background-color: #fff;
     margin: 0 auto;
-    height: 100vh;
     box-sizing: border-box;
     font-family: 'Open Sans', 'Lucida Grande', tahoma, verdana, arial, sans-serif;
 }
@@ -31,7 +30,6 @@ h6 {
     flex-direction: column;
     margin: 0 auto;
     max-width: 567px;
-    height: 100vh;
     padding: 3rem 20px;
     border: 1px solid gray;
 }
@@ -75,13 +73,17 @@ h6 {
     border-bottom: 1px solid gray;
 }
 
-.posts:last-child {
-    border-bottom: 0px;
+.post h3{
+    margin: 0;
+}
+
+.post h5{
+    margin: 0;
 }
 
 .button {
     font-size: 16px;
-    padding: 25px 5px;
+    padding: 15px 5px;
     border-radius: 0;
     border: 1px solid #948e9f;
     cursor: pointer;
@@ -93,6 +95,12 @@ h6 {
 
 .comments-likes {
     text-align: right;
+}
+
+.comments {
+    padding: 20px;
+    border: 1px solid gray;
+    margin-bottom: 2rem;
 }
 
 .comments li{
