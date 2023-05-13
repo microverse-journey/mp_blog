@@ -90,3 +90,11 @@ h6 {
     color: white;
     font-weight: bold;
 }
+
+.comments-likes {
+    text-align: right;
+}
+
+.comments li{
+    margin-bottom: 10px;
+}

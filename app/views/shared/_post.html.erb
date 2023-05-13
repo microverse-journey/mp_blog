@@ -1,0 +1,15 @@
+<%= link_to user_post_path(user, post) do %>
+    <div class="post">
+        <h3><%= post.title %></h3>
+        <p><%= post.text %></p>
+        <p class="comments-likes">Comments: <span class="comments"><%= post.comments_counter %>,<span> Likes <span class="likes"><%= post.likes_counter %>,<span></p>
+    </div>
+
+    <% if post.comments.count > 0 %>
+        <ul class="comments">
+            <%= render partial:  "shared/comment", collection: post.comments, as: :comment, locals: { user: user  } %>
+        </ul>
+    <% else %>
+        <p>No comments yet</p>
+    <% end %>
+<% end %>
