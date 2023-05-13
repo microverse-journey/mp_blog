@@ -1,1 +1,12 @@
-<h1>Single User</h1>
+<%= render 'shared/user', user: @user %>
+
+<div class="bio">
+    <h3>Bio</h3>
+    <p><%= @user.bio %></p>
+</div>
+
+<div class="posts">
+    <%= render partial: 'shared/post', collection: @user.three_most_recent_post, as: :post, locals: {user: @user} %>
+</div>
+
+<%= link_to "See all posts", user_posts_path(@user), class: "button" %>

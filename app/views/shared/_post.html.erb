@@ -1,0 +1,25 @@
+<% single_post ||= false %>
+<% display_comments ||= false %>
+<%= link_to user_post_path(user, post) do %>
+    <div class="post">
+        <h3><%= post.title %></h3>
+        <% if single_post %>
+          <h5>by: <%= user.name %></h5>
+          <p><%= post.text %></p>
+        <% else %>
+            <p><%= post.text.truncate(30,omission:'...') %></p>
+        <% end %>
+        <p class="comments-likes">Comments: <span class=""><%= post.comments_counter || 0 %>,<span> Likes <span class=""><%= post.likes_counter || 0 %><span></p>
+    </div>
+<% end %>
+
+ <% if display_comments %>
+    <h4>Comments</h4>
+    <% if post.comments.count > 0 %>
+        <ul class="comments">
+            <%= render partial:  "shared/comment", collection: post.comments, as: :comment, locals: { user: user  } %>
+        </ul>
+    <% else %>
+        <p>No comments yet</p>
+    <% end %>
+<% end %>
