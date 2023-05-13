@@ -1,3 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
+
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
 body {
   background-color: #fff;
   margin: 0 auto;
@@ -24,6 +31,7 @@ h4,
 h5,
 h6 {
   color: rgb(59, 59, 59);
+  font-family: "COCOGOOSE", sans-serif;
 }
 
 .container {
@@ -84,7 +92,7 @@ h6 {
 
 .button {
   font-size: 16px;
-  padding: 15px 5px;
+  padding: 10px 15px;
   border-radius: 0;
   border: 1px solid #948e9f;
   cursor: pointer;
@@ -92,6 +100,12 @@ h6 {
   background-color: #948e9f;
   color: white;
   font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.btn-success {
+  background-color: rgb(24, 145, 24);
+  color: white;
 }
 
 .comments-likes {
@@ -106,4 +120,37 @@ h6 {
 
 .comments li {
   margin-bottom: 10px;
+}
+
+input,
+textarea {
+  margin-bottom: 20px;
+  background: #fff;
+  border: 1px solid #cfd8dc;
+  border-radius: 8px;
+  width: 100%;
+  padding: 10px 10px;
+  color: #172b4d;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 20px;
+}
+
+.alert {
+  font-weight: bold;
+  text-align: center;
+  padding: 20px;
+}
+
+.alert-danger {
+  color: red;
+}
+
+.alert-success {
+  color: green;
+}
+
+.post-action {
+  display: flex;
+  column-gap: 20px;
 }
