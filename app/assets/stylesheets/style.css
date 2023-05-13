@@ -135,3 +135,17 @@ textarea {
   font-size: 17px;
   line-height: 20px;
 }
+
+.alert{
+  font-weight: bold;
+  text-align: center;
+  padding: 20px;
+}
+
+.alert-danger {
+  color: red;
+}
+
+.alert-success {
+  color: green;
+}
