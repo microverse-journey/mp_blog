@@ -22,8 +22,8 @@ class PostsController < ApplicationController
       flash[:success] = 'Post created successfully'
       redirect_to user_path(current_user)
     else
-      flash[:alert] = "Post couldn't be created"
-      render 'new'
+      flash[:alert] = "Oops! something went wrong. Post couldn't be created"
+      render :new
     end
   end
 
