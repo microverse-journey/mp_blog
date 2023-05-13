@@ -3,3 +3,7 @@
 <div class="posts">
     <%= render partial: 'shared/post', locals: { post: @post,user: @post.author, display_comments: true, single_post: true } %>
 </div>
+
+<%= link_to post_likes_path(@post), data: { turbo_method: :post } do %>
+    <%= @post.likes_counter %> Like Post
+<% end %>
