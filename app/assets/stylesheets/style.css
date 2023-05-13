@@ -1,3 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
+
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
 body {
   background-color: #fff;
   margin: 0 auto;
@@ -24,6 +31,7 @@ h4,
 h5,
 h6 {
   color: rgb(59, 59, 59);
+  font-family: "COCOGOOSE", sans-serif;
 }
 
 .container {
@@ -92,6 +100,12 @@ h6 {
   background-color: #948e9f;
   color: white;
   font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.btn-success {
+  background-color: rgb(24, 145, 24);
+  color: white;
 }
 
 .comments-likes {
@@ -106,4 +120,18 @@ h6 {
 
 .comments li {
   margin-bottom: 10px;
+}
+
+input,
+textarea {
+  margin-bottom: 20px;
+  background: #fff;
+  border: 1px solid #cfd8dc;
+  border-radius: 8px;
+  width: 100%;
+  padding: 10px 0px;
+  color: #172b4d;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 20px;
 }
