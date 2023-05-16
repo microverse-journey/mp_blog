@@ -3,7 +3,7 @@
 </div>
 
 <div class="posts">
-    <%= render partial: 'shared/post', collection: @user.posts, as: :post, locals: {user: @user, display_comments: true} %>
+    <%= render partial: 'shared/post', collection: @posts, as: :post, locals: {user: @user, display_comments: true} %>
 </div>
 
 <button class="button">pagination</button>
