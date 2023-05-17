@@ -38,7 +38,7 @@ RSpec.describe 'Posts', type: :system do
       visit user_post_path(@user.id, @post.id)
       expect(page).to have_text(@post.text)
     end
-    
+
     it 'shows the username of each commentor.' do
       visit user_post_path(@user.id, @post.id)
       expect(page).to have_content(@comment.author.name)
