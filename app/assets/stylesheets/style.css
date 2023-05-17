@@ -34,14 +34,14 @@ h6 {
   font-family: "COCOGOOSE", sans-serif;
 }
 
-.container {
+/* .container {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
   max-width: 567px;
   padding: 3rem 20px;
   border: 1px solid gray;
-}
+} */
 
 .user-card {
   display: grid;
@@ -88,24 +88,6 @@ h6 {
 
 .post h5 {
   margin: 0;
-}
-
-.button {
-  font-size: 16px;
-  padding: 10px 15px;
-  border-radius: 0;
-  border: 1px solid #948e9f;
-  cursor: pointer;
-  text-align: center;
-  background-color: #948e9f;
-  color: white;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.btn-success {
-  background-color: rgb(24, 145, 24);
-  color: white;
 }
 
 .comments-likes {
