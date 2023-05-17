@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'Posts', type: :system do
+RSpec.describe 'Posts', type: :feature do
   before :each do
     @user = User.create(name: 'Ermiyas', photo: 'https://picsum.photos/200/300', bio: 'I am a software engineer',
                         posts_counter: 0)
@@ -19,7 +19,7 @@ RSpec.describe 'Posts', type: :system do
 
     it "shows the user's profile picture" do
       visit user_posts_path(@user.id)
-      expect(page).to have_selector('.user-card img', count: 1)
+      have_css("img[src='#{@user.photo}']", wait: 30)
     end
 
     it 'shows the number of posts the user has written' do

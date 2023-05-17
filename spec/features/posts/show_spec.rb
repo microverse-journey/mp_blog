@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'Posts', type: :system do
+RSpec.describe 'Posts', type: :feature do
   before :each do
     @user = User.create(name: 'Ermiyas', photo: 'https://picsum.photos/200/300', bio: 'I am a software engineer',
                         posts_counter: 0)

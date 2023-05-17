@@ -1,11 +1,17 @@
 require 'rails_helper'
 
-RSpec.describe 'Users', type: :system do
+RSpec.describe 'Users', type: :feature do
   before :each do
     @user = User.create(name: 'Ermiyas', photo: 'https://picsum.photos/200/300', bio: 'I am a software engineer',
                         posts_counter: 0)
     @post = Post.create(title: 'This is my first post!!', text: 'I like it!!', author_id: @user.id,
                         comments_counter: 0, likes_counter: 0)
+    @post2 = Post.create(title: 'post 2', text: 'I like it!!', author_id: @user.id,
+                         comments_counter: 0, likes_counter: 0)
+    @post3 = Post.create(title: 'post 3', text: 'I like it!!', author_id: @user.id,
+                         comments_counter: 0, likes_counter: 0)
+    @post4 = Post.create(title: 'post 4', text: 'I like it!!', author_id: @user.id,
+                         comments_counter: 0, likes_counter: 0)
   end
 
   describe 'when i visit show user page' do
@@ -17,7 +23,7 @@ RSpec.describe 'Users', type: :system do
 
     it "shows the user's profile picture" do
       visit user_path(@user.id)
-      expect(page).to have_selector('.user-card img', count: 1)
+      expect(page).to have_css("img[src='#{@user.photo}']", wait: 30)
     end
 
     it 'shows the number of posts the user has written' do
@@ -33,7 +39,13 @@ RSpec.describe 'Users', type: :system do
 
     it "shows the user's first 3 posts" do
       visit user_path(@user.id)
+
+      @user.three_most_recent_post.each do |post|
+        expect(page).to have_content(post.title)
+      end
+
       expect(page).to have_selector('.post', maximum: 3)
+      expect(page).to_not have_content(@post.title)
     end
 
     it "shows a button that lets me view all of a user's posts" do
@@ -46,9 +58,9 @@ RSpec.describe 'Users', type: :system do
     context "When I click a user's post" do
       it "should redirects me to that post's show page" do
         visit user_path(@user.id)
-        click_link @post.title
+        click_link @post4.title
         sleep(1)
-        expect(page.current_path).to eq(user_post_path(@user.id, @post))
+        expect(page.current_path).to eq(user_post_path(@user.id, @post4))
       end
     end
 
