@@ -16,5 +16,19 @@ RSpec.describe 'Posts', type: :system do
       visit user_post_path(@user.id, @post.id)
       expect(page).to have_content(@user.name)
     end
+    it "shows the post's title" do
+      visit user_post_path(@user.id, @post.id)
+      expect(page).to have_text(@post.title)
+    end
+    it 'shows how many comments it has' do
+      visit user_post_path(@user.id, @post.id)
+      expect(page).to have_text(@post.comments_counter)
+      expect(page).to have_selector('.comments-likes', count: 1)
+    end
+    it 'shows how many likes it has' do
+      visit user_post_path(@user.id, @post.id)
+      expect(page).to have_text(@post.likes_counter)
+      expect(page).to have_selector('.comments-likes', count: 1)
+    end
   end
 end
