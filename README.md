@@ -118,6 +118,12 @@ The following command can be used to run the application.
 - Twitter: [@DemsewErmiyas](https://twitter.com/DemsewErmiyas)
 - LinkedIn: [@Ermiyas Demsew](https://www.linkedin.com/in/ermiyas-demsew-616b1b19a/)
 
+👤 **John Kpordje**
+
+- GitHub: [@Outkarm](https://github.com/Outkarm)
+- Twitter: [@outkarm](https://twitter.com/outkarm)
+- LinkedIn: [John Kpordje](https://www.linkedin.com/in/john-kpordje-866749241/)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
