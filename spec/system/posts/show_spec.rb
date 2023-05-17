@@ -30,5 +30,19 @@ RSpec.describe 'Posts', type: :system do
       expect(page).to have_text(@post.likes_counter)
       expect(page).to have_selector('.comments-likes', count: 1)
     end
+    it "shows the post's body" do
+      visit user_post_path(@user.id, @post.id)
+      expect(page).to have_text(@post.text)
+    end
+    it 'shows the username of each commentor.' do
+      visit user_post_path(@user.id, @post.id)
+      expect(page).to have_content(@comment.author.name)
+      expect(page).to have_content(@comment2.author.name)
+    end
+    it 'shows the comment each commentor left' do
+      visit user_post_path(@user.id, @post.id)
+      expect(page).to have_text(@comment.text)
+      expect(page).to have_text(@comment.text)
+    end
   end
 end
