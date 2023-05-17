@@ -25,11 +25,12 @@
 
 # 📖 [Mrprotocoll Blog] <a name="about-project"></a>
 
-**[Mrprotocoll Blog]** is a Mrprotocoll Blog is a blog website that show the list of posts and empower readers to interact with them by adding comments and liking posts. 
+**[Mrprotocoll Blog]** is a Mrprotocoll Blog is a blog website that show the list of posts and empower readers to interact with them by adding comments and liking posts.
 
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
+
 - <a href="https://www.ruby-lang.org/en/documentation/">Ruby</a>
 - <a href="https://rubyonrails.org/">Rails</a>
 - <a href="https://www.postgresql.org/">PostgreSQL</a>
@@ -56,20 +57,20 @@ To get a local copy up and running, follow these steps.
 
 In order to run this project you need:
 
-1. git 
-use the following link to setup `git` if you dont have it already installed on your computer 
+1. git
+use the following link to setup `git` if you dont have it already installed on your computer
 <p align="left">(<a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">install git</a>)</p>
 
 2. Ruby
-use the following link to setup `Ruby` if you dont have it already installed on your computer 
+use the following link to setup `Ruby` if you dont have it already installed on your computer
 <p align="left">(<a href="https://www.ruby-lang.org/en/documentation/installation/">install Ruby</a>)</p>
 
-2. Rails
-use the following link to setup `Rails` if you dont have it already installed on your computer 
+3. Rails
+use the following link to setup `Rails` if you dont have it already installed on your computer
 <p align="left">(<a href="https://guides.rubyonrails.org/getting_started.html#creating-a-new-rails-project-installing-rails">install Ruby</a>)</p>
 
-3. PostgreSQL
-use the following link to setup `PostgreSQL` if you dont have it already installed on your computer 
+4. PostgreSQL
+use the following link to setup `PostgreSQL` if you dont have it already installed on your computer
 <p align="left">(<a href="https://www.tutorialspoint.com/postgresql/postgresql_environment.htm">install PostgreSQL</a>)</p>
 
 ### Setup
@@ -92,12 +93,12 @@ Install dependencies:
 Edit `config/database.yml` with your database connection info.
 
 ### Usage
+
 The following command can be used to run the application.
 
 ```sh
   rails s
 ```
-
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -110,6 +111,12 @@ The following command can be used to run the application.
 - GitHub: [@mrprotocoll](https://github.com/mrprotocoll)
 - Twitter: [@dprotocoll](https://twitter.com/dprotocoll)
 - LinkedIn: [@mrprotocoll](https://www.linkedin.com/in/mrprotocoll)
+
+👤 **Ermiyas Demsew**
+
+- GitHub: [@The-Normal-One1](https://github.com/The-Normal-One1)
+- Twitter: [@DemsewErmiyas](https://twitter.com/DemsewErmiyas)
+- LinkedIn: [@Ermiyas Demsew](https://www.linkedin.com/in/ermiyas-demsew-616b1b19a/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
