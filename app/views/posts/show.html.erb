@@ -3,6 +3,6 @@
 </div>
 
 <div class="post-action">
-    <%= link_to "Add Comment", new_user_post_comment_path(@post.author,@post), class: "button btn-success" %>
-    <%= button_to "Like Post", user_post_likes_path(@post.author,@post),  method: :post, class: "button" %>
+    <%= link_to "Add Comment", new_user_post_comment_path(@post.author,@post), class: "btn btn-outline-secondary" %>
+    <%= button_to "Like Post", user_post_likes_path(@post.author,@post),  method: :post, class: "btn btn-secondary" %>
 </div>
