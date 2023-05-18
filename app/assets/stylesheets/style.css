@@ -9,7 +9,7 @@ body {
   background-color: #fff;
   margin: 0 auto;
   box-sizing: border-box;
-  font-family: 'Open Sans', 'Lucida Grande', tahoma, verdana, arial, sans-serif;
+  font-family: "Open Sans", "Lucida Grande", tahoma, verdana, arial, sans-serif;
 }
 
 ul {
@@ -129,7 +129,7 @@ textarea {
 }
 
 .alert-success {
-  color: green;
+  color: chartreuse;
 }
 
 .post-action {
