@@ -10,7 +10,10 @@
         <% else %>
             <p><%= post.text.truncate(30,omission:'...') %></p>
         <% end %>
-        <p class="comments-likes">Comments: <span class=""><%= post.comments_counter || 0 %>,<span> Likes <span class=""><%= post.likes_counter || 0 %><span></p>
+        <div class="d-flex justify-content-end">
+            <%= link_to "Delete Post", user_post_destroy_path %>
+            <p class="comments-likes">Comments: <span class=""><%= post.comments_counter || 0 %>,<span> Likes <span class=""><%= post.likes_counter || 0 %><span></p>
+        </div>
     </div>
 <% end %>
 
