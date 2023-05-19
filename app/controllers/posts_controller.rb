@@ -38,5 +38,4 @@ class PostsController < ApplicationController
       flash[:alert] = 'Oops something went wrong. Try again'
     end
   end
-
 end

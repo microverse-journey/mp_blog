@@ -1,4 +1,3 @@
-# frozen_string_literal: true
 #   can :read, :all
 #   return unless user.admin?
 #   can :manage, :all
@@ -33,6 +32,5 @@ class Ability
     else
       can :manage, [Post, Comment], author_id: user.id
     end
-
   end
 end
