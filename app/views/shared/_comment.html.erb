@@ -1,1 +1,3 @@
-<li><span class="username fw-bold"><%= comment.author.name %>:</span>  <%= comment.text %></li>
+<li><span class="username fw-bold"><%= comment.author.name %>:</span>  <%= comment.text %>
+<%= button_to "Delete", user_post_comment_path(user, post, comment), class: "btn btn-secondary btn-sm", method: :delete %>
+</li>
