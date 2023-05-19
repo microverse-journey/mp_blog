@@ -28,4 +28,15 @@ class PostsController < ApplicationController
       render :new
     end
   end
+
+  def destroy
+    post = Post.find(params[:id])
+    if post.destroy
+      flash[:notice] = 'Post deleted successfully'
+      redirect_back(fallback_location: root_path)
+    else
+      flash[:alert] = 'Oops something went wrong. Try again'
+    end
+  end
+
 end
