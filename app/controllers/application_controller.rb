@@ -1,7 +1,6 @@
 class ApplicationController < ActionController::Base
   before_action :configure_permitted_parameters, if: :devise_controller?
 
-  load_and_authorize_resource
   # Catch all CanCan errors and alert the user of the exception
   rescue_from CanCan::AccessDenied do | exception |
     redirect_to root_url, alert: exception.message

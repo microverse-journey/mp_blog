@@ -10,7 +10,9 @@
             <p><%= post.text.truncate(30,omission:'...') %></p>
         <% end %>
         <div class="d-flex justify-content-between w-100">
-            <%= button_to "Delete Post", user_post_path(user, post), class: "btn btn-secondary btn-sm", method: :delete %>
+            <% if can? :destroy, post %>
+                <%= button_to "Delete Post", user_post_path(user, post), class: "btn btn-secondary btn-sm", method: :delete %>
+            <% end %>
             <p class="comments-likes">Comments: <span class=""><%= post.comments_counter || 0 %>,<span> Likes <span class=""><%= post.likes_counter || 0 %><span></p>
         </div>
     </div>
