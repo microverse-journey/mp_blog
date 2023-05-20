@@ -3,6 +3,11 @@ Rails.application.routes.draw do
     confirmations: 'users/confirmations'
   }
 
+  namespace :Api do
+    namespace :V1 do
+      resource :users
+    end
+  end
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   resources :users, only: [:index, :show] do
     resources :posts, only: [:index, :show, :destroy] do
